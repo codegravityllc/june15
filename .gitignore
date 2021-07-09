@@ -1,6 +1,7 @@
 # Compiled class file
+bin
 *.class
-
+~$jee_latest.xlsx
 # Log file
 *.log
 
