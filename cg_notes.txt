@@ -1,0 +1,797 @@
+Procedure Oriented programming - C language
+	problem/task oriented
+		takeOff
+		
+Object oriented programming - real world approach
+methodical, structured, organized, modular
+	system oriented
+		Rocket
+			Has -a booster engine, exhaust fan, combustion
+			Does -a
+				ignite - combustion
+				exhaust - exhaust fan
+				start engine - booster engine
+	
+		building
+			bricks, cement, wood
+			does
+				buildWall - gather brick,cement,wood
+				buildRoom - put enough buildwall together
+				BuildFloor
+
+Java - JDK/JRE(platofrm or environment for developing java  program)
+C Sharp - Dotnet(platofrm or environment for developing c sharp program)
+	Visual studio - editor for C sharp 
+	Spring tool suite - editor for java programs
+		
+, C++, C sharp dotnet, Ruby
+	dotnet
+	salesforce - apex -
+	testing selenium - java
+	
+	
+Amazon Product page
+	Has-A ( information u have with sw)
+		productName,price,description
+	Does-A (Activity u do with sw)
+		addQuanity
+		selectSize
+		Add2Cart
+		Checkout
+		Payment
+
+FB profilePage	
+	Has-A (Attributes/Variable)  vary ? change
+		name,age,educational,professional,friendsLit
+	Does-A ( action/behavior)
+		change Age - impacts age attribute
+		change educational
+	
+Person
+	Has-A legs,hands,mouth
+	Does - impact/change Attributes
+		walk - legs (idle or rest TO motion) (logic/ algorithm)
+		eat - hands & mouth
+		talk - mouth
+	
+	
+walk
+
+
+BankAccount
+	has-a
+		name=john
+		account number=123
+		balance=100
+	does-a
+		withdraw
+			50$ = impacts balance... reduce by 50 (logic, algorithm, implementation)
+		deposit
+			100$= impacts balance... increase by 100
+	
+
+
+Iphone - 5 years
+	call
+	text
+	browse
+Iphone3 - 1 year
+	map
+IphoneX - 1 year
+	call
+	text
+	browse
+	map
+	fingerprint
+Iphone12 - 1 year
+	call
+	text
+	browse
+	map
+	fingerprint
+	facial recognition
+		
+		
+		
+Car , food, ford , mustang, pizza , mustangv16, pineapple pizza
+
+Car > ford > mustang > mustangv16
+food > pizza > pineapple pizza
+
+
+is-A
+pizza is-A food (inheritnace)
+
+creditcard,product, electronics, crypto, laptop, payment
+
+payment > credit > cypto
+product > electronics > laptop
+
+laptop is-A electronics
+electronics > laptop
+
+electronics is-A product
+
+overriding
+
+access privlege
+
+Login - many form. polymorphism
+	email/pwd
+	phone
+	fingerprint scan
+	facial recog
+payment
+	credit
+	paypal
+	crypto
+
+
+
+
+
+*************6/3*****************
+
+Name your program appropriately ( BankAccount)
+Make a list of 
+	Has-A : what bank account has ? number, balance, name etc
+	Does-A : what activity/action bank account does ? withdraw, deposit
+	
+Variables - ATTRIBUTES (HAS A)
+	how to recognize variables : Has-A exercise		
+	how to code variable : 
+		understand what to name it & what information it can store
+		Data_type Variablename;
+***********int accountNumber;****************
+		byte/short/int/long
+		int number;
+		if information type is simple choose primitive or String, if complex choose object.
+			primitive 
+				number - byte/short/int/long
+				decimal number - float/double
+				yes/no - boolean
+				single character - char
+	how do we name it : camel case..  number, alphabet, $, _
+	what can we do with variables
+		declare, initialize, assign, pass
+	type of variables
+		global : has-a contains
+		local : temprory info holder
+		parameteric : input from outside program
+	
+Methods - ACTIONS (DOES A)
+	how to recognize methods : Does-A exercise
+	how to code methods :
+		understand what to name it - ********add********
+		what input is required 
+			1 or more or none data... comma seperated for more than 1.. leave it empty for none
+			********add - 2 input - int a int b********
+		what output is returned
+			1 or none data... more than 1 create another class (complex data)... if none write "void"
+			return value from method based on the output above.
+				if primitive output - literal value or variable of same type
+				if object output - variable of same type
+			********add - 1 output - int********
+	how to call/access method
+		within same program... 
+			direct with name....  pass input that matches
+				if primitive input - literal value or variable of same type
+				if object input- variable of same type
+		outside the program
+			create reference to other program
+			call with reference followed by dot followed by direct method name.... pass input that matches
+				if primitive input - literal value or variable of same type
+				if object input- variable of same type
+
+ATM{ class block 
+	withdraw{ method block
+		check if sufficent balance
+		allow withdraw
+		if no sufficient balance error
+	}
+	deposit{
+		add new amount to the balance
+	}
+	check balance{
+		display balance
+	}
+}
+BankRegistration{
+	login{
+		check userid available or not
+	}password change{
+		verify identity
+		changepassword
+	}
+}
+
+
+
+
+
+BANKACCOUNT 
+has-a and does-a = member of the program... class members
+	has-a ( storing information )
+		address
+		NAME=john
+		ACCOUNTNUMBER=123
+		BALANCE=100
+	does-a ( read or change above information )
+		WITHDRAW
+			50$ = impacts balance... reduce by 50 (logic, algorithm)
+		DEPOSIT
+			100$= impacts balance... increase by 100
+		CHECKBALANCE
+			read balance
+
+public class BankAccount{
+	// has-a = variables - the state is changeable
+	name=john
+	long accountNumber=123;
+	
+	//type_of_data    	name_of_data =    	value_of_data;
+	float balance=199.23; // variable initialization
+	
+	primitive data type =
+		numerical data = byte,short,int,long 123
+		decimal data = float, double 999.99
+		character = char a,b,c,1,3,&
+		boolean = yes/no true/false
+	
+	complex object data type =
+		inbuilt libraries = String, arraylist, hashmap, threads
+		user-defined = 
+}
+
+
+
+
+
+
+AmazonProduct - program name
+productPrice - has-a in the program
+
+
+System - program name
+out - has-a
+
+
+
+
+******************** 6/4 ****************************
+BANKACCOUNT 
+has-a and does-a = member of the program... class members
+	has-a ( storing information ) - VARIABLES
+		address
+		NAME=john
+		ACCOUNTNUMBER=123
+		BALANCE=100
+	does-a ( read or change above information ) - METHODS
+		WITHDRAW
+			50$ = impacts balance... reduce by 50 (logic, algorithm)
+		DEPOSIT
+			100$= impacts balance... increase by 100
+		CHECKBALANCE
+			read balance
+			
+public class BankAccount{
+	data type, 	variable name,	value
+	long balance=0;
+
+
+
+
+
+}
+		
+	primitive data type = SIMPLE INFORMATION
+		numerical data = byte,short,int,long 123
+		decimal data = float, double 999.99
+		character = char a,b,c,1,3,&
+		boolean = yes/no true/false
+	Object data type = COMPLEX INFORMATION
+		Inbuilt - libraries (programs avaialble as part of JDK installation)
+		User-defined
+	
+	
+	byte = 1 byte , (-128 to +127 )
+	short = 2 byte , 32767
+	int = 4 byte , 2 billion
+	long = 8 byte , trillions
+	
+	long balance=; 
+	byte monthOfbirth=
+	short yearOfbirth=
+	int zipCode=90210
+	double pie=
+	double starCoordinate=
+	float productPrice=123.99
+	char initial='1';
+	boolean accountSuspended=false;		
+			
+			
+			
+			
+	shopPhone
+		input = cash
+		output = phone
+		
+	login
+		input = userid,password
+		output = welcome, error page
+	
+	withdraw
+		input = amount to withdraw
+		output = cash, display outstanding balance
+		
+	checkBalance
+		input = Not applicable
+		output = display outstanding balance
+	
+	
+	
+	
+	
+does-a ( read or change above information ) - METHODS
+		WITHDRAW
+			50$ = impacts balance... reduce by 50 (logic, algorithm)
+	
+		What do i name it ?  WITHDRAWMONEY
+		what is the input required ? 
+			what do we name it ?   WITHDRAWAMOUNT
+			what kind/type of innformation to expect ? number... LONG
+		what is the output ?
+			what kind/type of innformation to return ?  number.... LONG
+			
+access_prviliege		outputdata_type   	name_of_operation 		input_to_the_operation
+public 				long 				withdrawMoney			( long withdrawAmount   )
+	
+	
+output - can be 1 or 0
+		1 data type= primitive or object data type
+		0 data type= void
+	
+input - can be 0 or N
+		more than 1 = separate with comma
+		0 input= leave it blank
+		
+		
+		
+		
+***************** 6/18 ********************
+int a; // primitivate data type declaration
+int b=10; // primitivate data type initialization
+Address ad1; // Object data type declaration
+Address ad2=new Address(); // Object data type initialization
+
+
+Person
+	has-a variable
+		hand
+		mouth
+		leg
+		name ( global information)
+		
+	does-a method
+		Add - 
+			(local information ) input = 2 number = 3 + 5
+			(local information ) output = 1 number = 8
+			
+			
+		EAT -
+			access hand & mouth (variable) - "accessing varaible"
+			access motion & openMouth (method) - "method call / accessing methods"
+		motion
+			move your hands
+		openMouth
+			move your mouth
+			
+			
+Car
+	has-a - variable
+		Wheel
+		engine
+		startButton
+	
+	does-a method
+		start
+			startButton // access variable
+			ignition() // method call
+			
+		ignition
+			spark ignite fuel
+			runMotor()
+			
+		runMotor
+			combustion, motor rotates
+			runWheel()
+			
+		runWheel
+			rotate wheel
+		
+		
+		
+RETURN STATEMENT RULES		
+/*
+ 	return data type should match = output/return data type
+ 	return type/output = primitive or String
+ 		return literal value
+ 		return initialzed primitive variable of same type
+ 
+ 	return type/output = object data type
+ 		return initialzed object variable of same type
+*/	
+	
+	
+METHOD CALL STATEMENT RULES		
+	passing input
+	/*
+		input = primitive or String
+			pass literal value of same type
+			pass initialzed primitive variable of same type
+	 
+		input = object data type
+			pass initialzed object variable of same type
+	*/		
+
+	handling return type
+	 
+public void add(int a, int b){
+	int p=30;
+	int q=40;
+	sub(   1 , 2       );
+	sub(   a,b          );
+	sub (  4,q  );
+}	
+	
+public void sub(int x, int y){
+	cdfsdfdsf
+}	
+	
+	
+	
+********************************
+
+
+	welcome to ATM
+	
+	if customer enterd wrong pin
+		invalid pin
+	if customer card is damaged
+		invalid card
+	if customer enterd valid pin and card is not damaged
+		choose option
+		withdraw 
+		deposit
+	if withdraw
+		enter amount
+	if sufficient balance
+		collect your cash
+	ELSE if not sufficient balance
+		insufficient fund
+	if deposit
+		enter amount
+		latest balance is X
+		
+	thank you for using xyz bank
+	
+	
+	
+	movie theater / airline flight = Fixed 
+	
+	for : Fixed number of loops
+	while : 0 or more loops
+	do - while : 1 or more loops
+	
+	
+	for(initialization ;condition check ;modification){
+		execution
+	}
+	
+	// infinite loop
+	for(int i=1;i < 5 ;i--){
+		sysout("hi");
+	}
+	
+	I C E = i 1 , TRUE , print hi
+	M C E = i 0 , TRUE, print hi
+	M C E = i -1, TRUE , print hi
+	M C E = i -2, TRUE, prinnt hi
+	M C E = i -3, TRUE, print hi
+	M C E = i -4, FALSE
+	M C E 
+	M C E 
+	
+	
+	continue Skip remaining part of for block 
+	break exits the entire for loop
+	
+	for(int i=1;i < 5 ;i++){
+		sysout("hi");
+		if(i==3){
+			break;
+		}
+		sysout("bye");
+	}
+	
+	I C E = i 1 , TRUE , print hi print bye
+	M C E = i 2, Trrue, print hi print bye
+	M C E = i 3, true, print hi
+	M C E = 
+	M C E = 
+	M C E 
+	M C E 
+	
+	
+	
+	
+******************** INHERITANCE ***************
+Inheritance
+	Why - reusability
+	how - extends keyword
+	limitation - Just 1 parent at a time
+		why - diamond problem (conflicts)
+		
+Child object creation
+	constructor - build parent first.. then child
+	
+Inheritance Object creation process
+	LHS=RHS
+	RHS can be any variable of same type or child of LHS variable
+	IphoneX > Iphone11
+	IphoneX ix=new IphoneX(); // same type on LHS and RHS
+	IphoneX ix2=new Iphone11(); // iphone11 is child of IphoneX
+	
+Method calls
+	Just like assignment operator
+	you can pass any variable to a method of same input type 
+	OR child of input type
+	
+	IphoneX ix=new IphoneX(); // same type on LHS and RHS
+	IphoneX ix2=new Iphone11(); // iphone11 is child of IphoneX
+	text(ix);
+	text(ix2);
+	
+	public void text(IphoneX input){
+	}
+	
+*************** POLYMORPHISM ************************
+
+Compile time polymorphism - Overloading
+	method signature in both similar method
+		method name must be same 
+		input must be different
+	both methods can be in same class or parent/child class
+Runtime polymorphism - Overriding
+	method signature are exactly similar
+	both methods have to be parent/child class
+	
+	Method call - overridden method of the actual object is called
+	
+	
+******************* interface ***************************
+
+
+Matmatical Service : add/ sub / mul/ div
+
+
+
+Accountant : taxes, financial ,
+
+
+variable - store information
+
+method - change information
+
+
+IIphone = incomplete / abstract
+	public void text();
+	public void call();	
+	default void touchScreen(){
+		asdsadasdasd
+		asdsad
+	}// backward compatibility 1.8
+**********************
+Iphone implements IIphone  = abstract
+	public void text(){
+		asdsadads
+	} 
+	public void call(){
+		asdsadasd
+	}
+**********************
+Iphone3 extens Iphone = abstract
+	public void browse(){
+		asdsadads
+	}
+**********************
+Iphone5 extens Iphone3= abstract
+	public void maps(){
+		asdsadads
+	}
+**********************
+IphoneX extens Iphone5= abstract
+	public void facialRecog(){
+		asdsadads
+	}
+	
+	
+	
+Interface > Abstract > concrete > concrete > concrete
+
+
+***************************** ACCESS PRIVILEGE *****************
+www.amazon.com/login
+com.amazon.www.login
+	register.java - variable 1 and methods 
+	forgtpassword.java
+	authenticate.java
+www.amazon.com.shopping
+	browse.java - access register variable1
+	add2Cart.java
+www.amazon.com.billing
+	
+www.amazon.com.profile
+www.amazon.com.payment
+
+pacage1 - LEFT
+	Program - variables
+	Program 1 related to Program
+	Program 2
+package2 - RIGHT
+	Program 3 related to Program
+	Program 4
+
+PUBLIC > Protected > default > private
+anyone > same package + related program in other packge > same package > same program
+
+
+
+CHANGE
+	program - by inheriting and changing it in child class
+	variables - methods can change values.. reassigning
+	methods - overriding
+	
+	
+Final
+	program - no INHERITANCE
+	variables - AGAINST VARIABLE DEFINITION
+	methods - no POLYMORPHISM ( PERFECT )
+	
+public class company{
+	final String country="usa";
+}
+
+public final class calcualtor{
+	public int add(int a, int b){
+		return a+b;
+	}
+	public int sub(int a, int b){
+		return a-b;
+	}
+}
+public class advanceCaluclator extends calcualtor{
+	 public int add(int a, int b){
+		return a*b;
+	}
+}
+
+
+************************************** static **********************
+Customer (store & change information)
+	String customerName;
+	String customerAddress;
+	static String bankName;
+	static String bankAddress;
+	
+	public void changeName(){
+		changeAddress();
+	}
+	
+	public void changeAddress(){
+		customerAddress="ny";
+	}
+	
+	public  static void add(){
+		sysout(bankName);
+	}
+	
+	public static void sub(){
+		int sum=1-1;
+	}
+	
+
+**************************** Exception handling *************************
+
+What is Exception ? unexcepted failure in your program. program terminates immediately.
+Why we need exception handling ?
+	ensure program gracefully terminates.
+	Customer - hide technical details and provide easy to undertand messages
+	Developer - insights. line # where problem occure... what problem occured
+How to ?
+	try - block where we except problem might occur
+	catch - block where we take action.(safety net)
+	finally
+	throws
+exception stack trace	
+multiple catch blocks
+compile-time exception
+runtime exception
+Null pointer exception
+
+User defined exception
+
+
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
+	at trainingPrograms.chap13_arrays.School.main(School.java:20)
+	at trainingPrograms.chap13_arrays.School.main(School.java:12)
+	at trainingPrograms.chap13_arrays.School.main(School.java:10)
+	at trainingPrograms.chap13_arrays.School.main(School.java:20)
+	at trainingPrograms.chap13_arrays.School.main(School.java:20)
+	at trainingPrograms.chap13_arrays.School.main(School.java:20)
+	at trainingPrograms.chap13_arrays.School.main(School.java:20)
+
+
+card damaged
+pin wrong
+insufficeinet balance
+atm out of money
+
+************************ collection *******************
+
+
+indexed - arrays, list
+sorted - treeset
+unordered - hashset
+faster editing - linkedlist
+ordered unique - linkedhashset
+ordered first come first serve duplicates - arraylist
+thread safe - vector
+
+HashMap<Integer,Student> s=new HashMap<Integer,Student>();
+Student is value
+value need not be unique
+Unique - hashcode and equals
+
+HashSet<Student> 
+Student unique- hashcode and equals
+
+
+Storing item in collection
+List - not unique (arraylist, vector, linkedlist)
+	user-defined data type(Student)  - No need to implement hashcode and equals 
+	in-built data type(String, Integer)
+Set -unique (hashset,linkedhashset,treeset)
+	user-defined data type(Student)  - 
+		hashset/linkedhashset - unique
+			implement hashcode and equals 
+		treeset - unique and sorted
+			implement hashcode and equals 
+			implemnts comparable interface
+	in-built data type(String, Integer)
+Map -
+	Key - unique (hashmap,linkedhashmap,treemap)
+		user-defined data type(Student)  - 
+			hashmap/linkedhashmap - unique
+				implement hashcode and equals 
+			treemap - unique and sorted
+				implement hashcode and equals 
+				implemnts comparable interface
+		in-built data type(String, Integer) 
+	value - not unique
+		user-defined data type(Student)  - no need to implement hashcode and equals 
+				or implemnts comparable interface
+		in-built data type(String, Integer) 
+
+
+
+
+
+********************** thread *****************
+
+Program extends Thread
+all code to be execute parallely in separate thread... public void run()
+Create object thread program.. and call start();
+
+
