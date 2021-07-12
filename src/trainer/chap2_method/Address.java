@@ -2,6 +2,7 @@ package trainer.chap2_method;
 
 public class Address {
 	// HAS ?
+	//bina changes
 	AddressLines customerAddressLine;
 	String streetName;
 	int buildingNumber;
