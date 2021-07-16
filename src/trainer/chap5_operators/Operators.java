@@ -1,6 +1,7 @@
 package trainer.chap5_operators;
 
 public class Operators {
+<<<<<<< HEAD
 	
 	
 	public static void main(String aregs[]) {
@@ -55,6 +56,14 @@ public class Operators {
 		System.out.println(  6 ^ 7 );
 		
 		System.out.println( 1 + (3 - 4 ) *5);
+=======
+	public void test() {
+		// This is a test comment
+		// sanju changes
+		// changes 2
+		// from spring tool suite - test
+		// Test 101
+>>>>>>> refs/remotes/origin/master
 		
 	}
 }
