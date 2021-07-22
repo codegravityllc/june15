@@ -1,7 +1,6 @@
 package trainer.chap8_interface_sub_class;
 
 public class Iphone3 {
-	
 	public Iphone3() {
 		System.out.println("in phone3 constr");
 	}
