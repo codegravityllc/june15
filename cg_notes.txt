@@ -615,7 +615,163 @@ IphoneX extens Iphone5= abstract
 		asdsadads
 	}
 	
+Inheritance
+	Sub class
+	Interface
+	Abstract class
 	
+concrete : complete program.. if u inherit from interface.. u have implemented
+			all misssing methods... new can be used
+abstract : incomplete program.. if u inherit from interface.. u have not implemented
+			all misssing methods
+
+LHS = RHS
+RHS can be same as LHS or RHS can be child of LHS
+Student s=new Student();
+Iphone3 i=new IphoneX();
+
+IIphone
+	void call();
+	void text();
+	default void browse(){
+	
+	}
+	
+Iphone3 implements IIphone
+Iphone4 implements IIphone
+Iphone5 implements IIphone
+Iphone6 implements IIphone
+Iphone7 implements IIphone
+Iphone8 implements IIphone
+Iphone9 implements IIphone
+
+
+Interface IToyota 
+	3 incomplete methods
+abstract Lexus implements (inherit 3 incomplete methods)
+	2 completed methods
+	1 incomplete methods
+lexusSmodel extends Lexus ( inherit 1 incomplete methods )	
+	1 complete methods
+lexusZModel extends lexusSmodel ( inherit 3 complete methods)
+	2 complete methods from grandparent lexus
+	1 complete method from parent lexusSmodel
+	
+	
+	
+Toyota company
+(1000)	big factory : builds body ( toyota,lexys,lexusSmodel,lexusZModel)
+(100)	small factories : engine for toyota
+(100)	small factories : engine for lexus
+(100)	small factories : engine for lexusSmodel
+(100)	small factories : engine for lexusZModel
+	
+(1000)	big factory : builds body and engine toyota
+(1000)	big factory : builds body and engine lexys
+(1000)	big factory : builds body and engine lexusSmodel
+(1000)	big factory : builds body and engine lexusZModel
+	
+	
+
+interface IPayment
+	getName();
+	getAddress();
+	takePayment();
+	
+creditPayment implements Ipayment
+	getName(){
+		asdsadsadad
+	}
+	getAddress(){
+		asdsadsadad
+		collect phone and email
+	}
+	takePayment(){
+		asdsadsadad
+	}
+
+PaypalPayment implements Ipayment
+	getName(){
+		asdsadsadad
+		collect phone and email
+	}
+	getAddress(){
+		asdsadsadad
+	}
+	takePayment(){
+		asdsadsadad
+	}
+DebitPayment implements Ipayment
+	getName(){
+		asdsadsadad
+		collect phone and email
+	}
+	getAddress(){
+		asdsadsadad
+	}
+	takePayment(){
+		asdsadsadad
+	}
+CryptoPayment implements Ipayment
+	getName(){
+		asdsadsadad
+		collect phone and email
+	}
+	getAddress(){
+		asdsadsadad
+	}
+	takePayment(){
+		asdsadsadad
+	}
+
+cashPayment implements Ipayment
+	getName(){
+		asdsadsadad
+	}
+	getAddress(){
+		asdsadsadad
+	}
+	takePayment(){
+		asdsadsadad
+	}
+
+
+interface IPayment
+	getName();
+	getAddress();
+	takePayment();
+Genralization : common methods/features written in abstract class
+abstract class AbPayment implements IPayment
+	getName(){
+		asdsadsadad
+	}
+	getAddress(){
+		asdsadsadad
+		collect phone and email
+	}
+	
+creditPayment extends AbPayment 
+	takePayment(){
+		bank transfer
+	}
+
+PaypalPayment  extends AbPayment 
+	takePayment(){
+		talk to paypal
+	}
+DebitPayment  extends AbPayment 
+	takePayment(){
+		asdsadsadad
+	}
+CryptoPayment  extends AbPayment 
+	takePayment(){
+		crypto wallet
+	}
+
+cashPayment  extends AbPayment 
+	takePayment(){
+		asdsadsadad
+	}	
 	
 Interface > Abstract > concrete > concrete > concrete
 
