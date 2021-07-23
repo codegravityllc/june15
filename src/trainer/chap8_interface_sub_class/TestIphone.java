@@ -21,7 +21,7 @@ public class TestIphone {
 			System.out.println("unlocking hidden features");
 			( (Iphone5)i3  ).browse();
 			( (Iphone5)i3  ).facialRecog();
-			System.out.println(  ( (Iphone5)i3  ).ss);
+			System.out.println(  ( (Iphone5)i3  ).a);
 		}
 		else{
 			System.out.println("not an iphone5");
