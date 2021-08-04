@@ -1,6 +1,9 @@
 package trainer.chap3_refernces;
 
 public class Person {
-	String name="John";
-	int age=10;
+	public String name="John";
+	public int age=10;
+	public void method() {
+		
+	}
 }
