@@ -1,5 +1,7 @@
 package trainer.chap14_exceptions;
 
+import java.io.IOException;
+
 import trainer.chap3_refernces.Person;
 
 public class Client {
@@ -10,6 +12,7 @@ public class Client {
 	static Person s4=new Person();
 	
 	public static void main(String[] args) {
+		/*
 		Person p=null;
 		System.out.println( p.age );
 		System.out.println( p.name);
@@ -19,7 +22,6 @@ public class Client {
 		s1.age=s2.age;
 		s3.age=s4.age;
 		System.out.println(s4.age);
-		/*
 		System.out.println("welcome to java bank");
 		int j;
 		try {
@@ -34,16 +36,17 @@ public class Client {
 			System.out.println("thank you for using java bank");
 		}
 		System.out.println("main ends");
-		/*
-		try {
+		*/
+		int a=-999900;
 			System.out.println("main begins");
 			Server t = new Server();
-			t.method1();
+			try {
+				t.method1();
+			} catch (InsufficientFundException e) {
+				e.printStackTrace();
+			}
 			System.out.println("main ends");
-		} catch (Exception e) {
-			System.out.println("we are facing technical difficulty please try again later");
-		}
-		*/
+		 
 	}
 
 }
