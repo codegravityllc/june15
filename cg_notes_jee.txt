@@ -1,0 +1,1031 @@
+IP addresss - Uniqueness for every device connected 
+		to the internet
+Port - Uniqueness for the softwares/application
+		running on each device
+
+
+Internet protocol address
+Ipv4
+123.11.123.245
+
+256 * 256 * 256 * 256 = 4 billion
+8 billion = morethan 1 devices
+
+Ipv6 - 32 bit long
+f234:1232:1231:1231:12312:f234:1232:1231:1231:12312
+trillions of possibilites
+1000 devices per person
+
+
+www.google.com = Domain name
+DNS - domain names server
+	convert domain name into ip address
+
+
+http://ec2.asdasd...aws.com
+http://www.facebook.com/
+
+www.facebook.com = DNS 1.23.4.5
+https = default port 443
+	
+http = default port 80
+	
+
+Ipaddress
+port
+domain name
+DNS
+DHCP
+Router
+security group in AWS
+
+netstat - all the port activities on your machine
+ping - other machine in reachable
+telnet - machine and software both are reachable
+
+
+
+
+
+hyperlink
+
+hyper text - text/content that has links to other resource(text/audio/video/images)
+
+html = hyper text markup language
+	prog language that provides content that hyper text
+http = hyper text transfer protocol/rules
+	hyper text content = source / destination transfer 
+	
+Ny
+	- usps
+	- package - slip/recipt/note
+		desitnation address - Ipaddress and port
+		size - bytes
+		source/return address
+		content - text/image/video/audio
+California
+
+
+package - courier recipt
+Http body - http header
+
+disorganized data
+john asdad adadaq qea 12312 ddsfsf
+jane awer fdddfgfdgdfgw werwe werv13 123
+
+markup language - meta data - info about data
+XML,HTML,SGML,WSDL
+- TAGS/ELEMENTS , opening tag
+
+<a id="skiplink" tabindex="0" class="skip-link">Skip to main content</a>
+
+<company> 
+	<customer>
+		<name age="20" >
+			<firnamt>
+			<last>
+		</name>
+		<street>
+			<buildingNum></buildingNum>
+			<buildingName></buildingName>
+			<streetNum></streetNum>
+			<streetName></streetName>
+		</street>
+		<city>adadaq qea</city>
+		<zip>12312</zip>
+		<country>ddsfsf</country>
+	</customer>
+</company> - closing tag
+
+tags/elements - 
+opening and lcosing tag - delimiters
+elements = <> </>
+	root 
+	parent - customer is parent elemeent of name element
+	child - customer is child element of company element
+	sibling - name and street sibling elements
+attribute
+	simple key-value info.
+	
+	
+	
+*********** html/css/javascript ****************
+Front end technologies
+	html - text , input and user action
+	css - graphics, animation, layout
+	javascript - logic, processing, animation, client side language
+		pre-processing
+		
+Events on a website are customer action - clicked, move mouse, types,
+enter
+	mouse listeneres
+	keyboard listeners
+pixels
+
+js - 
+	validate/verify customer form.
+	collect and track customer data
+	animation
+**********************************************
+
+WAR file - Web Archive file
+	html,css,js,images,video,audio
+	web-inf : java programs
+	lib/org : additional content- web container code (Tomcat)
+
+Web container/servlet container : Apache Tomcat , jboss, glassfish,weblogic - Oracle,websphere - IBM
+	servlet programs are MANAGED by tomcat.
+
+
+internet Http url access
+	relative
+	absolute
+
+index.html , test.css 
+download http://ec2-52-15-183-138.us-east-2.compute.amazonaws.com/index.html
+download = test.css ( relative path)
+download = http://ec2-52-15-183-138.us-east-2.compute.amazonaws.com/test.css (absolute path)
+
+
+Http 
+	header and body
+	stateless protocol
+	methods
+		get - more commonly used than post 
+			sends information in url itself
+			NOT secure
+			browser caches url
+			information size -2048 characters
+			send information type = text
+		post
+			sends information in the body - package
+			secure
+			browser does not cache
+			information size - limit
+			send information type - digital data ... text, file, video, audio, images
+	
+Http
+	Request - Client sends to server
+		header (label) - src, dest, content-type:text, content-size: byte
+		body ( content ) - content:search=java
+	Response - Server sends to client
+		header (label) - content-type:hypertext, html,text,img,mp4
+		body ( content ) - results from java search
+
+	Client : Internet customer who is using browser to access internet
+	Server : Any program/machine that responds to your request
+
+	Resources - ? digital content on the website/server.... images/videos/audio/text/html
+
+		http response code - 
+			2XX - OK, successfully download resource from the server
+			3XX - redirection.... resource exist on other website
+			4XX - ERRORS with downloadinng resources 
+				404 resource not found on the server
+				402 not authorized forbidden
+			5XX - Server error
+				Google program was unable to process your request
+				500
+				503
+				
+Data transfer - ?
+	get - no body.. no box... content and label... content/header is in the request
+		not secure ( data is visible )
+		send content - type = text
+		size= 2Kb
+		cache - stored on the browser (faster)
+	post - body has the content
+		safe and secure ( data is inside the body )
+		send content - type = text, image, video, audio, html ( ANY digital data )
+		size = unlimited*
+		cache - NOT stored on the browser (slower)
+		
+		FTP
+		SMTP
+		HTTP - most popular 
+		tranfering file, mail, hypertext
+		
+	http://amazon.com/image1.jpeg
+		Get
+			First time : From Client to Server..... Server to client back ( downloaded image is cached)
+			second time : reload from browsers memory cache
+			
+	http://amazon.com/image2.jpeg
+		Post
+			First time : From Client to Server..... Server to client back
+			second time : From Client to Server..... Server to client back
+
+
+
+Servlet
+	lifecycle
+	methods
+		init - once in it lifetime - called only once when object is created
+		doGet - everytime customer make a requests - get control if client sent http get data
+		doPost - everytime customer make a requests - post control if client sent http post data
+		service - everytime customer make a requests - calls doGet or doPost
+		
+	httpservlet request
+	httpservlet response
+	sessions
+
+typed
+	john
+	jee
+
+
+http://localhost/login?uid=john&pwd=jee
+	/login = LoginServlet.java
+		uid=john&pwd=jee > LoginServlet.java
+	query string/form data... key=value text pair
+http://localhost/login?johnjee
+
+
+<form method="get" action="/login">
+					<table>
+						<tr>
+							<td>Userid</td>
+							<td><input  type="text" id="uid" name="uid"  ></input></td>
+						</tr>
+						<tr>
+							<td>Password</td>
+							<td><input type="password" id="pwd" name="pwd"></input></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input id="loginsubmit" type="submit"></input></td>
+						</tr>
+					</table>
+
+
+******************************************
+
+1) when customer visit our website by typing URL.. AWS machine where website runs sends html code... (Customer browser downloads html code from aws machine)
+2) Browser software translates html code into visual/graphic content
+3) customer browses webpage... fills in the data and SUBMITS
+4) SUBMIT in html when clicked... the data is sent to url mentioned in ACTION
+5) data sent to url is created as Key=value pair... where key being the name of the input element and value being customer typed/chose
+
+reg userid - john1234
+reg password ad
+first name
+last name
+address street
+bldg
+city
+state
+zip
+country
+phone
+email id
+
+<<<<<register>>>
+
+action : /login
+key=value : uid=john&pwd=jee
+method : get / post 
+
+
+1) prepare javascript object
+2) configure 3 attributes - url, type, data
+3) prepare success or error function in this js object
+4) pass the Javascript object to jquery method $.ajax()
+
+var checkUserAjaxObj={
+	        url: '/doesUserExist',
+	        type: 'post',
+	        data: {
+	        	registerUser:$("#reguid").val(),
+				registerPwd:$("#regpwd").val()
+			},
+	        context: this,
+		    success: function (data) {
+	        		if(data=="true")
+	        			alert("userid already taken");
+						
+		        },
+	        error: function (data) {
+	        	console.log("failure");
+	        }
+	};
+	
+	$.ajax(  checkUserAjaxObj  );
+
+
+
+JSON - data format
+
+simple format
+key=value
+uid=john
+
+address=john123 asdsad=1 asdsad asdsad
+
+address=<address>
+	<name>john123</name>
+	<address>
+		<street>as`d</street>
+		<bldg>asd</bldg>
+		<bldgname>asd</bldgname>
+	</address>
+	<city>asd</city>
+	<country>asd</country>
+</address>
+
+address={
+	"name":"john",
+	"address":{
+		"street":"asd",
+		"bld":123,
+		"bldgName":"asdasd"
+	},
+	"city":"asdsad",
+	"country":"asdsad",
+	"fruits":[ "mango","banana","grapes"  ]
+}
+
+Convert json into javascript object = parse
+var jsaddress=JSON.parse(address);
+jsaddress.city
+jsaddress.address.bldgName
+
+
+address.bldgName
+json - java script object notation
+json string version of java script object
+
+var javasccriptObject={
+	        url: '/doesUserExist',
+	        type: 'post',
+	        data: {
+	        	registerUser:$("#reguid").val(),
+				registerPwd:$("#regpwd").val()
+			}
+	}
+var jsonObject={
+	        "url": '/doesUserExist',
+	        "type": 'post',
+	        "data": {
+	        	registerUser:$("#reguid").val(),
+				registerPwd:$("#regpwd").val()
+			}
+	}
+	
+	
+	
+	
+	URL mapping : map/point a http URL to a java program
+	
+********************* servlets ************************
+
+character stream
+	reader - reading text stream
+			FileReader - 
+			BufferedReader
+			
+	writer - write text stream
+			FileWriter
+			BufferedWriter
+byte stream
+	inputstream - read/receiving binary/byte file
+			FileInputStream
+			BufferedInputStream
+	outputstream- write/sending binary/byte file
+			FileOutputStream
+			BufferedOutputStream
+
+Servlet method parameters
+	HttpServletRequest : this object contnains all the information sent from client to server (request(
+	HttpServletResponse : this object helps in sending information back to client
+	
+Passing information 
+	session example
+	
+Request - Client SENDS information to the Server
+	Customer/Client form submit button - text format with Key-value pair
+		server program - 
+		******req.getParameter("password");******
+	Customer/Client upload image /video - binary format
+		server program is RECEIVE/reading/downloading image (BINARY)
+		******req.getInputStream().read()******
+	Customer/Client upload text chat - text format
+		server program is reciving/reading text
+		******req.getReader().read()******
+Response - Server SENDS information back to Client
+	text content - text,json,xml
+		getwriter
+	binary content - image, video, audio
+		getoutputstream
+	web page content - welcome.html
+		sendredirect
+		requestdispatcher forward
+
+	HTTP is a Stateless protocol
+	converstaion between client and server
+	
+	
+	Hi I am john (login)
+	Hi please add this item to the cart ( clicks on add to cart )
+	Hi Please check out.. here is my credit card ( clicks on payments)
+	Hi i am confirming my order ( clicks on place order button)
+	
+All 4 conversation between client and server over - Http
+
+Stateless - cannot remember the state or the context of the conversation
+
+Sessions
+
+2XX - OK
+3XX - redirect
+4XX - error on client side (CLIENT PROGRAM ERROR... html , js )
+5XX - error on server side ( SERVER JAVA PROGRAM ERROR) look exception stack trace
+
+
+status code ? 4xxx... look into html/js code.... 5xx look into server program error
+5xx - console... exception stack trace
+Where the error is - ? in at statements...  look for familiar program on top
+What the error is - ? look at the first line
+
+
+
+
+applies to 1 customer and 1 conversatino/transaction
+	request.getparameter = submit button... 
+	request.get/set attributes = forward... 1 program can pass
+				additional info to next program
+
+applies to 1 customer and multiple conversatino/transaction
+	session.get/set attributes = long term info storing
+		to overcome Http stateless problem
+
+applies to ALL customer and servlet program
+
+
+applies to ALL customer and ALL servlet program
+login - 
+	if(uid.equals("john") && pwd.equals("jee"))
+		req.getSession().setAttribute("login", "success");
+	else 
+		req.getSession().setAttribute("login", "failure");
+		
+welcome
+transfer money - 
+	if(req.getSession().getAttribute("login") == "success")
+		// allow money to transfer
+		
+check balance 
+	
+	
+	
+	reques attribute : 1 customer req/response cycle
+	session attribute : 1 customer multiple req/res cycle
+	servletconfig : all customer multiple req/res , 1 java servet program
+	servletContext : all customer multiple req/res , all java servet program
+		database information
+	
+	
+	
+	
+Workbench ( database client software )
+	Connect to DB server - ip/port/uid/pwd
+	select database 
+	write queries ( insert, select,update, delete )
+	execute query
+	read results/output
+	
+JDBC
+	Connect to DB server - ip/port/uid/pwd
+	select database 
+	(JDBC Connection string)
+	
+	
+	orders , shipping , product
+	try {
+		conn.autoCommit(false);
+ 
+
+		conn.commit(); // permanently save above changes
+	}
+	catch(Exception e){
+		conn.rollback(); // all temp changes are reverted back
+	}finally{
+		conn.close();
+	}
+	
+	
+	try{
+		insert table1
+		update table2  
+		delete table 3
+		conn.savepoint(); // mini commit
+		insert table1
+		update table2
+		delete table 3 // error - 
+		conn.commit()
+	}catch(){
+		conn.rollback();
+	}
+	
+	
+*********************** web service **************
+What are webservices ?
+What are microservices ?
+Soap v/s Rest webservice : 
+Soap 
+	Soap wsdl : describes webservice input and output details
+	Soap Bindings
+		Document : includes schema in wsdl that allows validation, sends data as xml, loosely coupled
+		RPC : no validation, sends data as several elements, tightly coupled
+	Soap implementation
+		top-down approach - design wsdl file and then generate java programs
+		bottom-up approach - design java programs and then generate wsdl file
+Rest
+	Input 
+		Get : If input is in URL.. 
+			query string
+			path param
+		Post : If input is complex such a json,xml etc
+		
+	Output
+		Complex output : json, xml etc
+		Simple output : text
+		
+http://aa.com/flightwebservice
+post
+<operation name="flight">
+	<src>ny</src>
+	<dest>chicago</dest>
+</operation>
+
+
+<operation name="flight">
+	<flight>
+		<number>AA123</number>
+		<time>2:30pm</time>
+	</flight>
+	<flight>
+		<number>AA111</number>
+		<time>5:30pm</time>
+	</flight>
+</operation>
+
+query string
+http://aa.com/flightwebservice?src=ny&dest=chicago
+path input
+http://aa.com/flightwebservice/ny/chicago
+
+
+
+microservice - Rest webservice , exchanging data as json
+		rest using json
+
+
+
+http://ec2-asdsad.aws.com/substraction
+{
+	
+}
+
+public class Calculator{
+	// simple input
+	// get or post
+	public int add( int a,  int b) {
+		return a+b;
+	}
+	// simple input
+	// get or post
+	public int sub(int a,int b){
+		return a-b;
+	}
+	// complex input
+	// post 
+	public boolean registration (Address a){
+		System.out.print(a.street);
+		return true;
+	}
+	
+	// input type json string
+	// http://localhost:8888/reg
+	@RequestMapping(value = "/reg", method = RequestMethod.POST, 
+			consumes = MediaType.APPLICATION_JSON_VALUE)
+	public boolean registration (@RequestBody Address a){
+		System.out.print(a.street);
+		return true;
+	}
+	
+}
+Rest - JSONMapper ( convert json data into java object)
+http://localhost:8888/reg
+{
+	"street":"asdas 123",
+	"city": "asdasd",
+	"state" : "qwe123",
+	"country": "adasd"
+}
+public class Address{
+	String street;
+	String city;
+	String state;
+	String country;
+	// get set method or all variable
+}
+
+
+
+Address a=new Address();
+a.street="street123";
+a.state="NY";
+a.city="nnyy";
+a.country="usa";
+return a;
+
+java object a converted into below json string
+jsonmapper
+produces=json
+consume=json
+{
+    "street": "street123",
+    "city": "nnyy",
+    "state": "NY",
+    "country": "usa"
+}
+
+
+
+
+********************* struts framework ****************************************
+
+Servlet responsibilities :
+	1) URL mapping : struts.xml
+	2) Request processing
+	3) business logic handling 
+	4) Response generation
+	
+	
+Struts framework
+	struts.xml - Controller
+	action java programs - model program
+	
+setup struts in the project
+	1) pom.xml - include all struts dependancy
+	2) include struts.xml in src/main/resources
+	3) include struts filter configuration method in the 
+		main program ( java file ending with name Application)
+
+View		    > controller  > Model
+teststrut.html > struts.xml > action program
+
+Servlet to strut upgrade:
+	1) URL mapping : in struts.xml create action element
+		map url to a class and method
+		<action name="test1"  class="com.strut.ProfileAction" method="testing2">
+		http://localhost/test1 - send request to ProfileAction program and testing2 method
+	2) Request processing
+		if html has textbox named abc
+		in action program create String variable abc... get/set methods
+	3) business logic handling 
+		written inside chosen action program method
+	4) Response generation
+		based upon action method string resopnse... configure appropriate response
+		in struts.xml
+		
+		
+java bean program = simple java program with variables and get/set method for those
+				variable
+	
+	
+View		    > controller  > Model (confidential/propritray)
+teststrut.html > struts.xml > action program
+
+teststrut.html > struts.xml > strut interceptor X action program
+	interceptor - logging, security, performance
+	
+	Jsp - Java server pages
+		HTML + Java
+		
+	Html - static webpage
+	JSP - dynamic webpage
+	
+		
+Strut tag libraries
+	Input flow : webpage (submit) > Strut.xml > Action program bean variables
+	Output flow : Action program bean variables > Strut.xml > webpage (STRUT TAG LIBRARY)
+	Types : 
+		control
+		data
+		ui
+		
+Struts responses
+	forward 
+	redirect
+	json
+	stream
+	
+
+Spring
+
+Servlet
+	Web response - redirect or forward
+	Non web response - text  or binary 
+	Json
+	
+webpage
+text or binary
+
+{
+	"firstName":"michael",
+	"lastName":null,
+	"myList1":[],
+	"pwd":"mike1!",
+	"userid":"mike"
+}
+
+
+
+Strut > Servlet framework
+Spring Data > JDBC framework
+spring > business layer/ bean
+
+
+tomcat - Web server
+	web container or servlet container 
+		webpage and servlet
+
+Weblogic/websphere - Enterprise server
+	web container or servlet container 
+		AND 
+	Enterprise Java Bean container
+
+Tomcat with spring project
+	web container or servlet container 
+		AND
+	Spring bean container
+	
+	
+	
+public class Car{
+	// Has-A Engine
+	// Dependancy
+	// Dependancy Injection
+	Engine eng=new Engine();
+	
+	public void drive(){
+		eng.run();
+	}
+	
+}
+
+
+
+
+public class RentalCustomer{
+	// Has-A Engine
+	// Dependancy
+	// Dependancy Injection
+	IEconomyCar ie;// hard coding
+	public void trip(){
+		ie.drive;
+		have fun
+	}
+	
+}
+public interface IEconomyCar{
+	drive();
+}
+public class Nissan implements IEconomyCar{
+	drive(){
+	}
+}
+public class chair{
+	sit(){
+	}
+}
+
+
+public class AmazonCustomer{
+	// Has-A Engine
+	// Dependancy
+	// Dependancy Injection
+	
+	// spring created and managed beans
+	String productClicked; // short term
+	ArrayList<String> cart=new ; // long term
+	
+	public void trip(){
+		ie.drive;
+		have fun
+		cartList.add("iphone");
+	}
+	
+}
+public boolean login(String userid,String password){	
+		// COMPARE USERID AND PASSWORD IN DATABASE THEN RETURN SUCCESS OR FAILURE LOGIN
+	
+}
+
+// performance check
+	long startTime=system.currenttimeinMillisec(); // 9:41:30.. current time in millisecond
+	// validate
+	if(userid!=null && !userid.equals(""))
+		return false;
+	// security
+	if(userid == "john")
+		return false;
+	// exception handling
+	try{
+	
+	}catch(Exception e){
+		// please try again late message
+	}
+	long stopTime=system.currenttime(); // 9:42:30
+	long totalTime=stopTime-startTime; // 60 seconds.. 60000 milli second = 60 seconds
+		
+Aspects - Cross cutting concerns, that do not directly
+	contribute to the core business logic but still needed
+performance 
+validation
+securty
+exception handling
+
+
+
+//"execution(int com.spring.beans.ProfileBean.*)" -- apply additional code to a specific method
+//"within(com.spring.beans..*) " -- apply additional code to multiple methods in the class and multiple programs in the package
+//"within(bean(*Bean) ) " -- apply additional code to all methods in the class that ends with name Bean
+
+"execution(int com.spring.beans.ProfileBean.getProfile(*)) && execution(int com.spring.beans.OrderBean.order(*)) "
+public UsersEntity getResponseTime(ProceedingJoinPoint  joinPoint) throws Exception{
+	security
+	performance
+	logging
+	execption handling 
+}	
+package com.spring.beans;
+public class ProfileBean{
+	public int getProfile(String userid){
+		asdasd
+	}
+	public void getProfile(int x){
+		asdasd
+	}
+	public int register(String userid){
+		asdasd
+	}
+	public int updatePwd(String userid){
+		asdasd
+	}
+	public int deleteProfile(String userid){
+		asdasd
+	}
+}
+package com.spring.beans;
+public class OrderBean{
+	public int order(String userid){
+		asdasd
+	}
+	public void cancelCOrder(int x){
+		asdasd
+	}
+	public int changeOrder(String userid){
+		asdasd
+	}
+	public int orderSstatus(String userid){
+		asdasd
+	}
+}
+
+
+
+
+
+
+public int getProfile(String userid){
+	// code abc 	- before
+		sysout("hi i am in spring get profile method");
+		return 0; // code xyz - AfterReturning
+		// code pqr - AfterThrowing - if exception thrown in above lines
+	// code qwe - after
+}
+
+@Around("execution(int com.spring.beans.ProfileBean.getProfile(*))")
+public UsersEntity test(ProceedingJoinPoint  joinPoint) throws Exception{
+	sysout("calling spring method");	
+	joinPoint.proceed();// give control to bean class
+	sysout("spring returned some results");
+}
+calling spring method
+hi i am in spring get profile method
+spring returned some results
+
+
+
+
+1) Application.properties- DB details
+2) main program(xxxxxApplication.java)
+	@EnableJpaRepositories("com.hibernate")
+	@EntityScan({"com.hibernate"})
+	@EnableTransactionManagement
+3) in com.hibernate package
+	entity program - that maps to your table
+	repository program - that allows u to CRUD operation
+	
+	
+	
+Entity program
+	@Entity
+	@Table(name="orders")
+	public class Orderjava{
+		@Column(name="pName")
+		String productname;
+		@Column(name="pQuantity")
+		String productquantity;	
+		@Column(name="userId")
+		String uid;
+		@Id
+		@Column(name="orderId")
+		String orderId;
+		// get set methods
+	}	
+	
+	orderStatus("1");
+Repository program - CRUD...
+	@Repository
+	public interface orderRepo extends JPARepository< Orderjava , String >{
+		List<Orderjava> findByOrderId(String orderId); // select * from orders where orderid="1";
+		List<Orderjava> findByNotInProductquantity(String orderId,String quant) // select * from orders where orderid="1" or pQuantity=5;
+	}
+Bean{
+	@autowired
+	orderRepo or;
+	public void orderStatus(String orderid){
+		List<Orderjava>  allRecords=or.findByOrderId(orderid); // repo has method to search/read all records by specific order id
+		allRecords.size() // 3
+		allrecords.get(0). userid
+	}
+	
+	public void placeOrder(String pn,String pq ,String orderid){
+		OrderJava oj=new OrderJava();
+		oj.productname=pn; oj.productquantity=pq; oj.orderid=orderid
+		or.save(oj); // INSERTED record with productname = iphone and product quentity  = 1
+	}
+	public void changeOrder(String pn,String pq,String orderid ){
+		OrderJava oj=new OrderJava();
+		oj.productname=pn; oj.productquantity=pq;oj.orderid=orderid
+		or.save(ij); // a record with order id 12345.... will be UPDATED prduct name as - sansug, quantity =3
+	}
+	public void deleteOrder(String orderid){
+		OrderJava oj=new OrderJava();
+		oj.orderid=orderid
+		or.delete(oj); // a record with order id 12345 will be DELETED
+	}
+	
+}	
+	placeOrder("iphone","1","12345");
+	changeOrder("samsung","3","12345");
+	deleteorder("12345");
+	
+	
+	
+************ log4j
+Sysout - problems
+	Source of the message unknown
+	Timestamp is missing.
+	Temp... print messages are lost when u restart your s/w
+	print control
+	
+Log4j
+	
+%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+
+2021-08-23 15:40:45 ERROR  RestCalculator:30 - hello log
+
+
+all > debug > Info > warn > error > off
+
+
+
+*********** SDLC style ***********
+
+Requirement : Login program to compare userid and pwd
+Development : write program to compare userid and pwd
+Testing : Testing
+
+
+TDD : Test Driven Development
+Requirement : Login program to compare userid and pwd
+Testing :
+	Make sure userid is entered
+	Make sure password is entered
+	Make sure userid & password is entered
+	Make sure TRUE if correct userid & password is entered
+	Make sure FALSE if wrong userid & password is entered	
+Development :
+	dummy program
+	
+	
+	
+Waterfall model - Legacy 
+Sprint model
+TDD
+	
+	
