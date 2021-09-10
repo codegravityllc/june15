@@ -484,14 +484,151 @@ check balance
 		database information
 	
 	
-	
-	
 Workbench ( database client software )
 	Connect to DB server - ip/port/uid/pwd
 	select database 
 	write queries ( insert, select,update, delete )
 	execute query
 	read results/output
+	
+database
+
+create table users(
+	userid varchar(20),
+	password char(20),
+	first_name datetime,
+	last_name number,
+	autobiography clob
+);
+
+varchar - varying character (String) 4000
+char - character (String) 2000
+clob - Character Large objects - TB
+
+number - integer
+float - decimal
+datetime - 1/1/2020 12:12:12
+blob - binary large objects
+
+
+DML - CRUD
+
+RECORDS
+Create 
+	which table - users
+	what column will have what values
+		userid=john
+		password=john1!
+		first_name=john
+		last_name=doe
+Query=insert into users (userid, password,first_name) values ('john','john1!','john');
+output= integer number that mentions how many records where inserted
+	
+read
+	which table = users
+	what columns to read = first_name and last_name
+	what is the condition = where userid is john
+Query=select <columns_to_read> from <table_name> where conditions
+output= Result set ... ( 0 or more records from the query )
+
+update
+	which table = users
+	which column to update = password
+	what is the condition = ? <MANDATORY>
+Query= Update users set password='abc' where
+	userid='john';
+output= integer number that mentions how many records were UPDATED
+
+delete
+	which table = users
+	what is the condition = ? <MANDATORY>
+	Query= DELETE from users where userid='john';
+	output= integer number that mentions how many records were DELETED
+	
+	
+	SQL injection attack
+
+
+webpage
+	uid 		       = java' or userid '%%
+	new password = java123
+update users set password='?' where userid='?';
+
+update users set password='java123' where userid='java' or userid '%';
+ASDASD
+QWE213
+ADSF234
+update users set password='java123' where userid='java';
+
+
+db driver
+ip and port
+database name
+authorization userid/pwd
+
+
+
+DDL
+	create 
+	alter
+	drop
+	truncate
+DML
+	insert
+	select
+	update
+	delete
+Condition - where
+	like
+	and
+	in
+	or
+	not
+reports
+	group by
+	order by
+	distinct
+	count
+	
+	
+	try{
+	open DB connection
+	personal info
+	education info
+		savepoint // mini commit
+	profession info
+	career info // excceptoin
+		savepoint
+	law info
+		commit(); // complete journey
+}
+catch(Exception e){
+	rollback
+}
+finally{
+	close db connection 
+}
+
+
+createStatement() – 
+	static query statement
+prepareStatement(sql) – 
+	dynamic binding query statement
+prepareCall(sql) 
+	stored proceudre statemtn
+	
+	OPEN Mysql workbench - configure connection
+
+ONCE after mysql is setup
+	create database training;
+	use training;
+	create table users(
+		userid varchar(64),
+		password varchar(64)
+	);
+	
+Javaprogram.... DatabaseConnection
+	change password root... (from mysql installation process)
 	
 JDBC
 	Connect to DB server - ip/port/uid/pwd
