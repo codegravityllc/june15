@@ -617,7 +617,7 @@ prepareStatement(sql) –
 prepareCall(sql) 
 	stored proceudre statemtn
 	
-	OPEN Mysql workbench - configure connection
+OPEN Mysql workbench - configure connection
 
 ONCE after mysql is setup
 	create database training;
@@ -667,14 +667,46 @@ JDBC
 *********************** web service **************
 What are webservices ?
 What are microservices ?
+	migrate Monolithic to Microsrvice architecture
+		Separate all webpages in 1 project
+		Create multiple microservice project that includes all the relevant/related
+			services in 1 group
+		Based on services - fetch all programs and methods for respective services
+			in their assigned project ( vertical split with respect to a specific
+			functinoaliity , collect all programs in each layer from vertical jee stack)
+						
+		
 Soap v/s Rest webservice : 
 Soap 
 	Soap wsdl : describes webservice input and output details
+		Consumers refer wsdl to understand providers webservice
+		Operation details.
+		input / output details.
+	Soap message : request/response data transferred over http protocol between 
+				server/client or publisher/consumer.
+		soap header : userid & password
+		soap body : input or output from the webservice
 	Soap Bindings
-		Document : includes schema in wsdl that allows validation, sends data as xml, loosely coupled
-		RPC : no validation, sends data as several elements, tightly coupled
+		Document : specifies that Soap body includes xml document like data
+			suitable for simple and complex data type
+			includes schema in wsdl that allows validation, sends data as xml, loosely coupled
+		RPC : specifies the soap body has xml representation of the remote method.
+			suitable for simple data type
+			no validation, sends data as several elements, tightly coupled
+			
+		RPC : simple and fast, NO VALIDATION 
+		Document : complex and slower, VALIDATION
+				
+		document style - wsdl file will contain schema
+		rpc style - wsdl file will NOT contain schema
+
+		schema is reponsible for validation
+			
+		validation - ? input.output data format, optional/mandotry, occurcene 	
+			
+			
 	Soap implementation
-		top-down approach - design wsdl file and then generate java programs
+		top-down approach - design wsdl file and then generate java programs (spring boot)
 		bottom-up approach - design java programs and then generate wsdl file
 Rest
 	Input 
@@ -789,6 +821,92 @@ consume=json
 
 
 
+PUBLISH webservice
+Rest
+	Get - Query string and path separated
+	Post - JSON input
+	JSON output
+Soap
+	Post
+
+
+CONSUME webservice... webservice client code
+Rest : RestTemplate is HTTP client java program
+	Get - Query string and path separated
+		URL
+		Input - included in URL
+		Output
+	Post - JSON input
+		URL
+		Input - included in BODY
+		Output
+	JSON output
+Soap
+	Post
+
+HTTP Client software for testing webservices
+	Browser : Testing any webservice that requires GET input
+	Postman : testing any webservice that requires POST input
+	Soap UI : tessting any SOAP webservices
+	
+webservice client
+webservice details
+http://localhost:8888/subCal?param1=10&param2=5
+5
+Webservice client program
+RestTemplate rt=new RestTemplate();
+int res=rt.getForObject("http://localhost:8888/subCal?param1=100&param2=50",
+Integer.class
+);
+
+
+http://localhost:8888/jsonRes/1/2
+{"sum":3,"sub":-1,"mul":2,"div":0}
+RestTemplate rt=new RestTemplate();
+ABC res=rt.getForObject("http://localhost:8888/jsonRes/1/2", ABC.class);
+	sysout( res.sum );
+
+public class ABC{
+	int sum;
+	int sub;
+	int mul;
+	int div;
+	get /set 
+}
+
+URL - http://localhost:8888/login
+Input - java/jee
+Output - true/false
+RestTemplate rt=new RestTemplate();
+boolean res=rt.getForObject("http://localhost:8888/login/java/jee", Boolean.class)
+
+Get
+	URL + Input
+	Output
+RestTemplate rt=new RestTemplate();
+int res=rt.getForObject("http://localhost:8888/addCal/3/12", 
+				Integer.class);
+	
+
+Post
+	URL : http://localhost:8888/jsonReqMul
+	Input : { "param1":10, "param2":20 }
+	Output : Integer
+
+RestTemplate postTest=new RestTemplate();
+		Input input=new Input();
+		input.param1=20; 
+		input.param2=100; 
+		// { "param1":20 , "param2":50 }
+		int res=postTest.postForObject("http://localhost:8888/jsonReqMul",
+				input,
+				Integer.class);
+		// Rest template
+		// 1) convert input reference into json string. { "param1":20 , "param2":50 }
+		// 2) make a call to url.. and pass above json string in the body
+		// 3) webservice response is converted into 3 parameter 
+		System.out.println("Mul rest service with json input result:"+res);
+	
 
 ********************* struts framework ****************************************
 
@@ -1140,6 +1258,33 @@ Log4j
 all > debug > Info > warn > error > off
 
 
+Project - internet - error mode
+	development - debug mode
+
+log.info - informative print
+log.debug - detailed version priting
+log.error - catch block
+
+public void payment(){
+	log.debug("customer entered paymnt");
+	log.debug("customer passed 123123 credit card");
+	try{
+		log.debug("begin money transfer");
+		
+		log.info("money transferred succesfully");
+	}catch(Exception e){
+		log.error("money transfer failed", e );
+	}
+	log.debug("customer exiting paymnt");
+}
+
+debug >  info > warn > error
+debug - debug, info, warn, error
+info - info, warn, error
+warn - warn, error
+error - error
+
+
 
 *********** SDLC style ***********
 
@@ -1165,4 +1310,30 @@ Waterfall model - Legacy
 Sprint model
 TDD
 	
+	
+	
+	
+	
+****************** testing ****************
+Soap UI - testing soap webservice
+	load testing - simulatenous/ parallel customers u can serve
+postman - testing Rest post web service
+browser - testing Rest get webservice
+browser - testing webpages 
+UI automation testing - selenium
+UI simulation -  chrome device toggle tool bar
+Test ng
+UNIT
+
+	current internet plan 1Mbps
+	hardware - 4 cpu, 8 gb ram
+	1400 tps
+	500 customer parallely
+	
+Upgrade ?
+	internet plan - 5 mbps
+	hardware - 20 cpu, 40 gb ram
+	
+	5000 tps
+	2500 customer parallely
 	
